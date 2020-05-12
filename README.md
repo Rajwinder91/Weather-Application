@@ -19,3 +19,25 @@ To run this project, install it locally using npm:
 npm install 
 npm start
 ```
+
+## Weather API
+```jsx
+//Weather APP ID and URL
+const APP_ID  = "d358c8db9ddce5fcd36ec299ec58041f"
+const API_URL = "https://api.openweathermap.org/data/2.5/weather"
+
+//Get Weather API data from openweathermap.org
+getWeatherInfo = () => {
+  axios.get(`${API_URL}?q=${this.state.cityName}&appid=${APP_ID}`)
+  .then(({ data }) => {
+      this.setState({
+          weatherRes : data
+      })
+  })
+  .catch(({ error }) => {
+      this.setState({
+          error  : "Response Not found"
+      })
+  });
+}
+```
