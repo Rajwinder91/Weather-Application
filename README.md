@@ -13,7 +13,8 @@
 ## API URL
 https://api.openweathermap.org/data/2.5/weather
 
-## Commands to run project 
+## Setup
+To run this project, install it locally using npm:
 ```jsx
 npm install 
 npm start
